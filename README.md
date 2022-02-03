@@ -1,33 +1,31 @@
 # Jobsity .NET Challenge
 ## Chatroom App
 
-[![N|Solid](https://raw.githubusercontent.com/json-api-dotnet/JsonApiDotnetCore/master/logo.png)](https://raw.githubusercontent.com/json-api-dotnet/JsonApiDotnetCore/master/logo.png)
+[![N|Solid](https://miro.medium.com/max/2000/1*7gauQRPKSzKJPEpVJnvORA.png)](https://miro.medium.com/max/2000/1*7gauQRPKSzKJPEpVJnvORA.png)
 ## Description
-This project is designed to test your knowledge of back-end web technologies, specifically in 
-.NET and assess your ability to create back-end products with attention to details, standards,
-and reusability.
-
-
-## Assignment
-The goal of this exercise is to create a simple browser-based chat application using .NET.
-
-This application should allow several users to talk in a chatroom and also to get stock quotes
-from an API using a specific command.
-
+This project was proposed for a backend aptitude assessment, specifically in .NET. The project has a Chat between logged in users, a bot for API requests and unit tests
 
 ## Installation
 
-Clone or download the repo and open the `JobsityChatApp.sln` file. 
+Install dependencies : 
+Microsoft SQL Server
+Angular CLI
 
-Run the next command to create database and tables.
-```sh
-dotnet ef database update
-```
-Open the `Client` directory in the terminal and run the next command to install dependencies.
+Download the source code and open the `JobsityChatApp.sln` file.
+
+Configure multiples projects on solution startup (JobsityChatAPI and StockBotAPI)
+
+Start the application and the ORM will take care of creating the database with its proper settings.
+
+No need to use migration
+
+##Client
+
+Run this commands below:
 ```sh
 npm install
 ```
-Run `client` with
+After this you can start the application
 ```sh
 ng serve -o
 ```
