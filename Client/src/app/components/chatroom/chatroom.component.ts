@@ -1,4 +1,4 @@
-import { Component, NgZone, Input, ElementRef } from '@angular/core';
+import { Component, NgZone, Input, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import Message from '../../models/message';
 import User from '../../models/user';
@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators'
   templateUrl: './chatroom.component.html'
 })
 export class ChatRoomComponent {
- 
+  @ViewChild('chatmessages') private myScrollContainer: ElementRef;
   message: Message;
   messages = new Array<Message>();
   textValue: string = '';
@@ -22,7 +22,6 @@ export class ChatRoomComponent {
   constructor(
     private http: HttpClient, 
     private chatService: ChatService,
-    private userService: UserService,
     private _el: ElementRef,
     private ngZone: NgZone) { 
       this.subscribeToEvents(); 
@@ -39,6 +38,20 @@ export class ChatRoomComponent {
         });
       });
       setTimeout(() => this.setScrollbar(), 500);      
+    }
+
+    ngOnInit() { 
+        this.scrollToBottom();
+    }
+  
+    ngAfterViewChecked() {        
+        this.scrollToBottom();        
+    } 
+
+    scrollToBottom(): void {
+      try {
+          this.myScrollContainer.nativeElement.scrollTop = this.myScrollContainer.nativeElement.scrollHeight;
+      } catch(err) { }                 
     }
 
     setScrollbar() {

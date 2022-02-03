@@ -1,10 +1,8 @@
 ﻿using JobsityChatAPI.Models;
-using JobsityChatApp.DTO.Users;
-using JobsityChatApp.Services.Users;
+using JobsityChatAPI.Services.Users.Contracts;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace JobsityChatAPI.Controllers

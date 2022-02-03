@@ -1,5 +1,4 @@
-<div class="container">
-  <h1>Welcome to ChatRoom</h1>
+<div>
   
   <app-login *ngIf="!loggedIn" (isLoggedIn)="toggleLoggedIn()" (userId)="setUserId($event)"></app-login>
   <app-chatroom *ngIf="loggedIn"></app-chatroom>

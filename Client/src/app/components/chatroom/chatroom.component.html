@@ -1,10 +1,10 @@
 <div class="chat-container">
-    <div class="chat-messages" id="chat-messages">
+    <div #chatmessages class="chat-messages" id="chat-messages" style="overflow-y: scroll; height: 85vh;">
       <div style="width: fit-content" *ngFor="let message of messages">
         <div class="speech-wrapper">
           <div class="bubble" [ngClass]="{'alt': message.UserId == user.Id}">
             <div class="txt">
-              <p class="name" [ngClass]="{'alt': message.UserId == user.Id}">{{ message.User.name }}</p>
+              <p *ngIf="message.User" class="name" [ngClass]="{'alt': message.UserId == user.Id}">{{ message.User.name }}</p>
               <p class="message">{{ message.Text }}.</p>
               <span class="timestamp">{{message.Date | date:'short'}}</span>
             </div>
@@ -15,10 +15,10 @@
     </div>
     <div class="chat-controls">
         <div class="input-message">
-          <input placeholder="Type here..." id="txtmessage" name="txtmessage" [value]="textValue" 
+          <input style="width: 15rem" class="form-control" placeholder="Type here..." id="txtmessage" name="txtmessage" [value]="textValue" 
           (input)="textValue=$event.target.value" (keydown.enter)="sendMessage()" placeholder="Type here..."  />
         </div>
-        <button (click)="sendMessage()" id="send" class="btn-primary" >
+        <button (click)="sendMessage()" id="send" class="btn btn-primary" >
           Send Message
         </button>
     </div>

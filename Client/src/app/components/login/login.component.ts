@@ -6,7 +6,6 @@ import UserService from '../../services/user.service';
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
-
   @Output() isLoggedIn = new EventEmitter<boolean>();
   @Output() userId = new EventEmitter<Number>();
   public register: boolean;
@@ -16,7 +15,7 @@ export class LoginComponent implements OnInit {
   public name: string;
   public loginSignUpMessage: string;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,) { }
 
   ngOnInit(): void {
   }
@@ -24,11 +23,11 @@ export class LoginComponent implements OnInit {
   public login(): void {
     this.userService.login(this.username, this.password).subscribe((response)=>{
       let token = response.accessToken;
-      this.userService.setUserToken(token);
       if(token !== '' && token !== undefined && token != null){
+        this.userService.setUserToken(token);
         this.isLoggedIn.emit(true);
-      }else  {
-        this.isLoggedIn.emit(false);
+      } else {
+        window.alert('Login error!')
       }
     });
   }

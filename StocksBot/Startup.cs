@@ -21,7 +21,7 @@ namespace StocksBotAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRazorPages();
+            services.AddControllers();
             services.AddTransient<HttpClient>();
             services.AddScoped<IStocksBotService, StocksBotService>();
         }
@@ -45,11 +45,9 @@ namespace StocksBotAPI
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }
