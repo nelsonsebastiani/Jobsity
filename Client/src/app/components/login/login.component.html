@@ -1,0 +1,66 @@
+<div class="login-container" *ngIf="!register">
+    <div class="login-title">
+        <h3>Login</h3>
+    </div>
+    <div class="login-controls">
+        <div class="login-inputs">
+            <div class="login-input">
+                <label>Username</label><br>
+                <input type="text" id="username" name="username" placeholder="Username"
+                (input)="username=$event.target.value"/>
+            </div>
+            <div class="login-input">
+                <label>Password</label><br>
+                <input type="password" id="password" name="password" placeholder="Password"
+                (input)="password=$event.target.value"/>
+            </div>
+            <br>
+            <div class="login-input">
+                <button (click)="login()" class="btn-primary">Sign In</button>
+            </div>
+            <div class="change-form">
+                <span>Not a user? </span><button class="borderless-button" (click)="toggleLoginSignUp()">Sign Up Here</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="register-container" *ngIf="register">
+    <div class="register-title">
+        <h3>Login</h3>
+    </div>
+    <div class="register-controls">
+        <div class="register-inputs">
+            <div class="register-input">
+                <label>UserName</label><br>
+                <input type="text" id="username" name="username" placeholder="Username"
+                (input)="username=$event.target.value"/>
+            </div>
+            <div class="register-input">
+                <label>Email</label><br>
+                <input type="email" id="email" name="email" placeholder="Email"
+                (input)="email=$event.target.value"/>
+            </div>
+            <div class="register-input">
+                <label>Full Name</label><br>
+                <input type="text" id="name" name="name" placeholder="Full Name"
+                (input)="name=$event.target.value"/>
+            </div>
+            <div class="register-input">
+                <label>Password</label><br>
+                <input type="password" id="password" name="password" placeholder="Password"
+                (input)="password=$event.target.value"/>
+            </div>
+            <div class="register-input">
+                <button (click)="signIn()" class="btn-primary">Sign Up</button>
+            </div>
+            <div class="change-form">
+                <span>Already a user? </span><button class="borderless-button" (click)="toggleLoginSignUp()">Sign In Here</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="loginSignUpMessage" class="sign-up-message">
+    <p>{{loginSignUpMessage}}</p>
+</div>
