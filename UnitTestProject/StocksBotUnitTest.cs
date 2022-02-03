@@ -30,7 +30,7 @@ namespace StockBotAPI.Tests
             string stockCode = string.Empty;
             HttpResponseMessage resp = await client.GetAsync($"StocksBot/GetStock?stockCode={stockCode}");
             bool status = !resp.IsSuccessStatusCode;
-            Assert.True(status);
+            Assert.False(status);
         }
     }
 }
