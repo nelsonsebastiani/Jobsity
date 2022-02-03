@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Distributed Services", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - External Services", "2 - External Services", "{622AB95B-15D3-4556-9BDB-92B6AFE2E4AA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JobsityChatAPI", "JobsityChatAPI\JobsityChatAPI.csproj", "{3BF13BD2-EEA3-4794-BEF6-1A5DC6CC0698}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{D775B45C-3AEC-4699-9010-D4E7C04D57D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D775B45C-3AEC-4699-9010-D4E7C04D57D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D775B45C-3AEC-4699-9010-D4E7C04D57D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF13BD2-EEA3-4794-BEF6-1A5DC6CC0698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF13BD2-EEA3-4794-BEF6-1A5DC6CC0698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF13BD2-EEA3-4794-BEF6-1A5DC6CC0698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF13BD2-EEA3-4794-BEF6-1A5DC6CC0698}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -32,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BAF35CF6-DFFC-4033-9A2F-010689DBAD61} = {622AB95B-15D3-4556-9BDB-92B6AFE2E4AA}
 		{D775B45C-3AEC-4699-9010-D4E7C04D57D4} = {622AB95B-15D3-4556-9BDB-92B6AFE2E4AA}
+		{3BF13BD2-EEA3-4794-BEF6-1A5DC6CC0698} = {35CEA549-4260-4D83-8AEC-2F9CBC01FAEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AD381C8-227F-4220-A70E-6493012792D1}
