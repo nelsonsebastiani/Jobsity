@@ -5,6 +5,13 @@
 ## Description
 This project was proposed for a backend aptitude assessment, specifically in .NET. The project has a Chat between logged in users, a bot for API requests and unit tests
 
+## Considerations
+I chose not to make architecture too extensive, too complex, due to the size of the API's.
+
+I chose to use everything in the API layer, as the API would only use 1 domain service.
+
+I often weigh architecture with performance. In very small projects, a very extensive and complex architecture would make maintenance difficult, slow the system down a bit.
+
 ## Installation
 
 Install dependencies : 
